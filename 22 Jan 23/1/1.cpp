@@ -155,6 +155,23 @@ int main() {
     while (t--) {
         int na , ma , nb , mb;
         cin >> na >> ma >> nb >> mb;
+
+        vector<vector<int>> a(na , vector<int>(ma));
+        vector<vector<int>> b(nb , vector<int>(mb));
+
+        for (vector<int>& i : a) {
+            for (int& j : i) {
+                cin >> j;
+            }
+        }
+
+        for (vector<int>& i : b) {
+            for (int& j : i) {
+                cin >> j;
+            }
+        }
+
+        MatrixPrint(MatrixMultiply(a , b));
     }
     return 0;
 }
