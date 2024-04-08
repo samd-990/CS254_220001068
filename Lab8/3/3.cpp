@@ -93,7 +93,7 @@ int main() {
         total_cost += wt;
         present[edge.id] = 1;
     }
-    cout << "Best cost: " << total_cost << endl;
+    cout << "Best cost: " << total_cost << '\n';
     int sec_best_cost = INT_MAX;
     vector<int> sec_best_MST;
     for (auto edge : edges) {
@@ -131,17 +131,11 @@ int main() {
         mst.clear();
         cost = 0;
     }
-    cout << "Second best cost: " << sec_best_cost << endl;
+    cout << "Second best cost: " << sec_best_cost << '\n';
     cout << "Edge id's in second best MSTs are: ";
     for (auto i : sec_best_MST) {
         cout << i << " ";
-    } cout << endl;
-    int comp_one = dsu.find(1);
-    for (int i = 2; i <= n; i++) {
-        if (comp_one != dsu.find(i)) {
-            cout << "IMPOSSIBLE" << endl;
-            break;
-        }
     }
+    cout << '\n';
     return 0;
 }
